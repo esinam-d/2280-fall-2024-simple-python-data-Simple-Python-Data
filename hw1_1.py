@@ -2,7 +2,7 @@ import math
 #write a function that compute the area of a circle
 def compute_area(r):
     # put your code here
-    pass
+    return math.pi*r**2
 
 if __name__ == "__main__":
     radius = int(input('Enter radius: '))
