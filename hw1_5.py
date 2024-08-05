@@ -4,7 +4,7 @@ import math
 # Print a nice message with the answer.
 def compute_mpg(miles, gallons):
     # put your code here
-    return miles/gallons
+    return miles/gallons+1
 
 if __name__ == "__main__":
     miles = float(input('Enter miles driven: '))
