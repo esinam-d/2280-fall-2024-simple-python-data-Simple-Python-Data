@@ -4,7 +4,7 @@
 # Example current time 13, lapse time 50 -> go off time 15
 def compute_alarm_time(current_time, lapse_time):
     # put your code here
-    pass
+    return (current_time + lapse_time) % 24
 
 if __name__ == "__main__":
     current_time = int(input('Enter current time: '))
