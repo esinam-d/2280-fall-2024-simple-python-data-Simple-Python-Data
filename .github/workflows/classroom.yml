@@ -31,10 +31,25 @@ jobs:
         command: pytest hw1_2_test.py
         timeout: 10
         max-score: 20
+    - name: test3
+      id: test3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test3
+        setup-command: ''
+        command: python hw1_5.py
+        input: |-
+          50
+          2
+        expected-output: '25'
+        comparison-method: contains
+        timeout: 10
+        max-score: 20
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST_RESULTS: "${{steps.test.outputs.result}}"
         TEST2_RESULTS: "${{steps.test2.outputs.result}}"
+        TEST3_RESULTS: "${{steps.test3.outputs.result}}"
       with:
-        runners: test,test2
+        runners: test,test2,test3
