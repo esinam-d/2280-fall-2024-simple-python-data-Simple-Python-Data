@@ -13,15 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: test
-      id: test
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: test
-        setup-command: pip install pytest
-        command: pytest hw1_1_test.py
-        timeout: 10
-        max-score: 20
     - name: test2
       id: test2
       uses: classroom-resources/autograding-command-grader@v1
@@ -45,11 +36,20 @@ jobs:
         comparison-method: contains
         timeout: 10
         max-score: 20
+    - name: hw1_0_test
+      id: hw1_0_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: hw1_0_test
+        setup-command: pip install pytest
+        command: pytest --a=2 --b=3 --sum=5 hw1_0_test.py
+        timeout: 10
+        max-score: 20
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        TEST_RESULTS: "${{steps.test.outputs.result}}"
         TEST2_RESULTS: "${{steps.test2.outputs.result}}"
         TEST3_RESULTS: "${{steps.test3.outputs.result}}"
+        HW1_0_TEST_RESULTS: "${{steps.hw1_0_test.outputs.result}}"
       with:
-        runners: test,test2,test3
+        runners: test2,test3,hw1_0_test
