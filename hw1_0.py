@@ -1,9 +1,6 @@
-#Write a function that output sum of two numbers
-
-def sum(a,b):
-    return a+b
+# Write a program that asks the user for two numbers and prints their sum.
 
 if __name__ == "__main__":
-    a = float(input('Enter a: '))
-    b = float(input('Enter b: '))
-    print(f'The sum is {sum(a,b)}')
+    # Get the two numbers from the user
+
+    # Calculate and print the sum of the two numbers

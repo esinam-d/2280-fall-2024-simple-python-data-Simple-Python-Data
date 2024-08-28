@@ -1,9 +1,6 @@
-import math
-#write a function that compute the area of a circle
-def compute_area(r):
-    # put your code here
-    return math.pi*r**2
+# Write a program that asks user for radius of a circle and print area of the circle
 
 if __name__ == "__main__":
-    radius = int(input('Enter radius: '))
-    print(f'The area is {compute_area(radius)}')
+    # Get the radius of the circle from the user
+
+    # Calculate and print the area of the circle

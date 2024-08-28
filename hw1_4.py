@@ -1,9 +1,7 @@
 import math
-#write a function that compute volume of a sphere
-def compute_sphere_volume(r):
-    # put your code here
-    pass
+#write a program that asks user for radius of a sphere and print volume of the sphere
 
 if __name__ == "__main__":
-    radius = int(input('Enter radius: '))
-    print(f'The volume is {compute_sphere_volume(radius)}')
+    # Get the radius of the sphere from the user
+
+    # Calculate and print the volume of the sphere
